@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="cards">
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+
+                <p>
+                    {{ form.email.label() }}<br>
+                    {{ form.email() }}
+                </p>
+                <p>
+                    {{ form.password.label() }}<br>
+                    {{ form.password() }}
+                </p>
+                <input type="checkbox" id="remember" value="rem">
+                <label for="remember"> Remember Me</label><br>
+
+                <p>{{ form.submit() }}</p>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{% endblock%}

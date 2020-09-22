@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>My Pitch</h1>
+    {% for pitch in all_pitches %}
+    <ul>
+        <li>
+            <span class="field-name">Product:</span>
+            <span class="field-value">{{ pitch.product }}</span>
+        </li>
+        <li>
+            <span class="field-name">Price:</span>
+            <span class="field-value">{{ pitch.price }}</span>
+        </li>
+        <li>
+            <span class="field-name">Market:</span>
+            <span class="field-value">{{ pitch.market }}</span>
+        </li>
+        <li>
+            <span class="field-name">Product Info:</span>
+            <span class="field-value">{{ pitch.product_info }}</span>
+        </li>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock %}

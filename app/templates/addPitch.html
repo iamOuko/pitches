@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>Add Product Pitch</h4>
+<div class="container">
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.product.label() }}<br>
+            {{ form.product() }}
+        </p>
+        <p>
+            {{ form.price.label() }}<br>
+            {{ form.price() }}
+        </p>
+        <p>
+            {{ form.market.label() }}<br>
+            {{ form.market() }}
+        </p>
+        <p>
+            {{ form.product_info.label() }}<br>
+            {{ form.product_info() }}
+        </p>
+
+
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+
+{% endblock %}
